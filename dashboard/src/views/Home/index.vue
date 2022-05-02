@@ -1,3 +1,8 @@
 <template>
-  <h1>Aqui é a Home</h1>
+     <h1 font-black class="text-brad-main">Aqui é a home</h1>
 </template>
+<script>
+export default {
+
+}
+</script>

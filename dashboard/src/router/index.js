@@ -1,14 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-
 const Home = () => import('../views/Home/index.vue')
 const Feedbacks = () => import('../views/Feedbacks/index.vue')
 const Credencials = () => import('../views/Credencials/index.vue')
 
-const routes = [
+export const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: Home
   },
   {
@@ -18,19 +17,19 @@ const routes = [
     meta: {
       hasAuth: true
     }
-    },
-    {
-      path: '/credencials',
-      name: 'Credencials',
-      component: Credencials,
-      meta: {
-        hasAuth: true
-      }
-      },
-      {
-        path: '/:pathMatch(.*)*',
-        redirect: {name:  'Home'}
-      }
+  },
+  {
+    path: '/credencials',
+    name: 'Credencials',
+    component: Credencials,
+    meta: {
+      hasAuth: true
+    }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: { name: 'Home' }
+  }
 ]
 
 const router = createRouter({

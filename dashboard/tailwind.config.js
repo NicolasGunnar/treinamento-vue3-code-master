@@ -1,4 +1,3 @@
-const colors = require('tailwindcss/colors')
 const palette = require ('./palette')
 
 module.exports = {
